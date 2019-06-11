@@ -1,0 +1,29 @@
+<hibernate-configuration>
+<session-factory>
+<!--  Database connection settings  -->
+<!--
+<property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+                   <property name="connection.url">jdbc:hsqldb:hsql://localhost/TestDB</property> 
+-->
+<property name="connection.driver_class">org.postgresql.Driver</property>
+<property name="connection.url">jdbc:postgresql://localhost:5432/Mappingdb3</property>
+<property name="connection.username">axelor</property>
+<property name="connection.password">axelor</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<!--  JDBC connection pool (use the built-in)  -->
+<property name="connection.pool_size">1</property>
+<!--  SQL dialect  -->
+<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+<!--
+Enable Hibernate's automatic session context management 
+-->
+
+<!--  Echo all executed SQL to stdout  -->
+<property name="show_sql">true</property>
+<mapping class="SabKhuch.ReaderEntity"/>
+<mapping class="SabKhuch.SubscriptionEntity"/>
+<mapping class="SabKhuch.Alpha"/>
+	
+
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,28 @@
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories{
+	jcenter()
+}
+dependencies{
+	// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+	
+	// https://mvnrepository.com/artifact/com.google.inject/guice
+	compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+	
+	// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-servlet
+	compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '4.2.2'
+	
+	// https://mvnrepository.com/artifact/com.google.inject.extensions/guice-persist
+	compile group: 'com.google.inject.extensions', name: 'guice-persist', version: '3.0-rc2'
+	
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.3.Final'
+	
+	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+	
+
+}
